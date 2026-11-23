@@ -19,3 +19,17 @@
 - 확인: `miku_pick1/check.png` (원본 | 조합 | 빨강=빠짐 2,014px · 파랑=넘침 26px · 노랑=색 차이) · PSNR 32.3dB
 - 색: 보이는 픽셀은 모두 원본 색 (반투명 가장자리는 불투명 레이어가 나올 때까지 밑 레이어도 원본 색), 가려진 부분만 생성 색 → 레이어 가장자리 선·테두리 제거
 - PSD: `miku_pick1/mix.psd` (17레이어, neck 꺼짐) · 레이어 PNG: `miku_pick1/layers/NN_이름.png` (00 = 맨 앞)
+
+---
+# 조합 2 (miku_pick2): back_center를 로컬 모델로 다시 만듦
+
+pick1과 같고 **back_center만 교체** → 스펙 [miku_pick2.json](miku_pick2.json)
+
+1. **분리 (text_layers.py)**: oldPC42 `back hair.png` → Grounding DINO("twin tail" 좌/우 박스) + SAM2(마스크) + LaMa(트윈테일 밑 48px 띠) → `back_center_process/debug_labels.png`, `02_back_center.png`
+2. **가려진 부분 생성 (amodal_complete.py, SDXL 인페인팅)**: 트윈테일(oldPC42 + s0)에 가려진 자리를 SDXL이 그림 → 후보 `back_center_process/candidates.png`
+   - hull: 둥근 외곽을 잇지만 오른쪽이 직선으로 잘린 채 남음
+   - key seed0: 분홍 조각 · key seed2: 얼굴 옆모습이 그려짐 → 탈락
+   - **key seed1 채택** (색 오차 2.8, 둥근 뒤통수 + 양옆 윤곽선)
+3. 머리카락 3장(tail_left · tail_right · back_center)은 원본 색 복사 제외(`keep_rgb`) — seed가 달라 모양이 원본과 어긋나서, 복사하면 다른 부위 선이 찍힘
+- 확인: `miku_pick2/back_hair_check.png` (뒤통수만 · 뒷머리 3장 · 전체 합성), PSNR 30.0dB
+- 남은 점: back_center 오른쪽 가장자리에 얇은 보라색 테두리(key 모드 마젠타 잔여)

@@ -1,0 +1,103 @@
+{
+ "src": "seethrough_test/miku_chibi_sprite/miku_chibi_sprite/src_img.png",
+ "visible_rgb": "src",
+ "note": "사용자 선택 2026-11-24: front hair=Claude 선택(s9), back hair=s0 양갈래 분리, 가운데 뒷머리=oldPC42에서 s0 트윈테일 빼기(시도), head~mouth=s1, neck=s2(꺼둠), topwear=s8, handwear=s8 좌우, bottomwear=s4, legwear=s1, headwear=s6(분리 안 함) / 2026-11-24 보이는 픽셀은 모두 원본 색(visible_rgb) / pick2: back_center = oldPC42 back hair를 text_layers(DINO+SAM2+LaMa)로 분리 → amodal_complete key 모드(SDXL) seed1 / 머리카락 3장(tail_left·tail_right·back_center)은 keep_rgb(원본 색 복사 안 함)",
+ "layers": [
+  {
+   "name": "front hair",
+   "run": "seethrough_test/miku_grow_seed9",
+   "tag": "front hair"
+  },
+  {
+   "name": "tail_left",
+   "run": "seethrough_test/miku_grow_seed0",
+   "tag": "back hair",
+   "split": "left",
+   "keep_rgb": true
+  },
+  {
+   "name": "tail_right",
+   "run": "seethrough_test/miku_grow_seed0",
+   "tag": "back hair",
+   "split": "right",
+   "keep_rgb": true
+  },
+  {
+   "name": "back_center",
+   "run": "seethrough_test/miku_chibi_sprite",
+   "tag": "back hair",
+   "png": "seethrough_test/text_layers/miku_oldPC42_backhair/amodal/back_center_key.png",
+   "keep_rgb": true
+  },
+  {
+   "name": "face",
+   "run": "seethrough_test/miku_grow_seed1",
+   "tag": "face"
+  },
+  {
+   "name": "irides",
+   "run": "seethrough_test/miku_grow_seed1",
+   "tag": "irides"
+  },
+  {
+   "name": "eyebrow",
+   "run": "seethrough_test/miku_grow_seed1",
+   "tag": "eyebrow"
+  },
+  {
+   "name": "eyewhite",
+   "run": "seethrough_test/miku_grow_seed1",
+   "tag": "eyewhite"
+  },
+  {
+   "name": "eyelash",
+   "run": "seethrough_test/miku_grow_seed1",
+   "tag": "eyelash"
+  },
+  {
+   "name": "mouth",
+   "run": "seethrough_test/miku_grow_seed1",
+   "tag": "mouth",
+   "depth": 0.43,
+   "rgb_from": "src"
+  },
+  {
+   "name": "neck",
+   "run": "seethrough_test/miku_grow_seed2",
+   "tag": "neck",
+   "hidden": true
+  },
+  {
+   "name": "topwear",
+   "run": "seethrough_test/miku_grow_seed8",
+   "tag": "topwear"
+  },
+  {
+   "name": "handwear-l",
+   "run": "seethrough_test/miku_grow_seed8",
+   "tag": "handwear",
+   "split": "left"
+  },
+  {
+   "name": "handwear-r",
+   "run": "seethrough_test/miku_grow_seed8",
+   "tag": "handwear",
+   "split": "right"
+  },
+  {
+   "name": "bottomwear",
+   "run": "seethrough_test/miku_grow_seed4",
+   "tag": "bottomwear"
+  },
+  {
+   "name": "legwear",
+   "run": "seethrough_test/miku_grow_seed1",
+   "tag": "legwear"
+  },
+  {
+   "name": "headwear",
+   "run": "seethrough_test/miku_grow_seed6",
+   "tag": "headwear"
+  }
+ ]
+}
