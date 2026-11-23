@@ -33,3 +33,8 @@ pick1과 같고 **back_center만 교체** → 스펙 [miku_pick2.json](miku_pick
 3. 머리카락 3장(tail_left · tail_right · back_center)은 원본 색 복사 제외(`keep_rgb`) — seed가 달라 모양이 원본과 어긋나서, 복사하면 다른 부위 선이 찍힘
 - 확인: `miku_pick2/back_hair_check.png` (뒤통수만 · 뒷머리 3장 · 전체 합성), PSNR 30.0dB
 - 남은 점: back_center 오른쪽 가장자리에 얇은 보라색 테두리(key 모드 마젠타 잔여)
+
+## pick2 마무리 (7·8단계)
+- 빠진 윤곽선 1,846px(762조각, 모두 레이어에서 3.7px 이내) → 가장 가까운 레이어에 원본 픽셀로 (`fill_missing`) → **빠짐 0px**, PSNR 30.9dB
+- back_center 보라 테두리 488px → 가장 가까운 깨끗한 색(검은 윤곽선)으로 (`despill`)
+- **`miku_pick2/hidden.png`**: 레이어마다 혼자 놓고, 앞 레이어에 가려지는 부분을 초록으로 표시 (앞 레이어를 옮기면 드러나는 곳). 윤곽 안에 체커보드(구멍)가 없으면 통과
