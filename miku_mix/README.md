@@ -38,3 +38,9 @@ pick1과 같고 **back_center만 교체** → 스펙 [miku_pick2.json](miku_pick
 - 빠진 윤곽선 1,846px(762조각, 모두 레이어에서 3.7px 이내) → 가장 가까운 레이어에 원본 픽셀로 (`fill_missing`) → **빠짐 0px**, PSNR 30.9dB
 - back_center 보라 테두리 488px → 가장 가까운 깨끗한 색(검은 윤곽선)으로 (`despill`)
 - **`miku_pick2/hidden.png`**: 레이어마다 혼자 놓고, 앞 레이어에 가려지는 부분을 초록으로 표시 (앞 레이어를 옮기면 드러나는 곳). 윤곽 안에 체커보드(구멍)가 없으면 통과
+
+## pick2 두 버전 (레이어 검은 선 문제)
+- 원인: "보이는 픽셀은 원본 색"(visible_rgb) 처리가 레이어에 **다른 부위의 선**을 찍음. seed가 달라 레이어 모양이 원본과 1~3px 어긋나는 자리 + 앞 레이어 반투명 가장자리 밑 → 원본의 그 자리 선(앞머리 윤곽·눈 테두리·치마 밑단)이 복사됨
+- **`miku_pick2_srccolor/`** (A, 이전 pick2): 합성이 원본에 가장 가까움(PSNR 30.9) · 레이어 face·legwear·handwear 등에 남의 선
+- **`miku_pick2_clean/`** (B): 모든 레이어 생성 색 그대로(See-through 기본과 같음), mouth만 원본 색 · 레이어 깨끗 · 합성은 생성 색(PSNR 27.8, "01" 글자 등 세부가 생성된 모양)
+- 비교: **[variants_compare.png](variants_compare.png)** (위 A · 아래 B / 레이어 5장 + 얼굴·몸 합성 확대)
