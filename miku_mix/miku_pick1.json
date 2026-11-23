@@ -11,7 +11,7 @@
   {"name": "eyebrow", "run": "seethrough_test/miku_grow_seed1", "tag": "eyebrow"},
   {"name": "eyewhite", "run": "seethrough_test/miku_grow_seed1", "tag": "eyewhite"},
   {"name": "eyelash", "run": "seethrough_test/miku_grow_seed1", "tag": "eyelash"},
-  {"name": "mouth", "run": "seethrough_test/miku_grow_seed1", "tag": "mouth", "depth": 0.43},
+  {"name": "mouth", "run": "seethrough_test/miku_grow_seed1", "tag": "mouth", "depth": 0.43, "rgb_from": "src"},
   {"name": "neck", "run": "seethrough_test/miku_grow_seed2", "tag": "neck", "hidden": true},
   {"name": "topwear", "run": "seethrough_test/miku_grow_seed8", "tag": "topwear"},
   {"name": "handwear-l", "run": "seethrough_test/miku_grow_seed8", "tag": "handwear", "split": "left"},

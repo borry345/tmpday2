@@ -7,7 +7,7 @@
 | front hair | s9 | Claude 선택 (seed 간 차이 거의 없음) |
 | tail_left / tail_right | s0 back hair | 연결 조각 좌우 분리 (이미지 기준 왼/오) |
 | back_center | oldPC42 back hair | **시도**: s0 트윈테일(4px 넓혀) 빼고 가장 큰 조각 |
-| face · irides · eyebrow · eyewhite · eyelash · mouth | s1 | mouth 깊이 0.43으로 고정 (얼굴 앞) |
+| face · irides · eyebrow · eyewhite · eyelash · mouth | s1 | mouth: 깊이 0.43 고정(얼굴 앞) + 색은 원본 픽셀 (생성 가장자리 회색 테두리 제거) |
 | neck | s2 | PSD에 넣되 꺼둠 |
 | topwear | s8 | |
 | handwear-l / -r | s8 | 좌우 분리 |

@@ -1,6 +1,6 @@
 {
  "spec": "seethrough_test/mix/miku_pick1.json",
- "psnr_white_db": 27.2,
+ "psnr_white_db": 27.21,
  "missing_px": 2014,
  "extra_px": 26,
  "layers_front_to_back": [
@@ -58,6 +58,7 @@
    "run": "seethrough_test/miku_grow_seed1",
    "tag": "mouth",
    "depth": 0.43,
+   "rgb_from": "src",
    "depth_median": 0.43,
    "px": 114,
    "file": "layers/06_mouth.png"
