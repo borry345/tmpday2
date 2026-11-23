@@ -1,0 +1,42 @@
+{
+ "head_xywh_input": [
+  517,
+  245,
+  311,
+  285
+ ],
+ "scale": 1.28125,
+ "pad_pos": [
+  0,
+  56
+ ],
+ "iters_allowed": 3,
+ "step": 0.25,
+ "max_margin": 1.0,
+ "passes": [
+  {
+   "pass": 0,
+   "crop_input": [
+    455,
+    188,
+    890,
+    587
+   ],
+   "crop_1024": [
+    355,
+    190,
+    694,
+    501
+   ],
+   "margins": {
+    "left": 62,
+    "right": 62,
+    "top": 57,
+    "bottom": 57
+   },
+   "touching": {},
+   "grow": []
+  }
+ ],
+ "final_pass": 0
+}

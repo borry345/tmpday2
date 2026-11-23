@@ -1,0 +1,81 @@
+{
+ "head_xywh_input": [
+  547,
+  234,
+  284,
+  297
+ ],
+ "scale": 1.28125,
+ "pad_pos": [
+  0,
+  56
+ ],
+ "iters_allowed": 3,
+ "step": 0.25,
+ "max_margin": 1.0,
+ "passes": [
+  {
+   "pass": 0,
+   "crop_input": [
+    491,
+    175,
+    887,
+    590
+   ],
+   "crop_1024": [
+    383,
+    180,
+    692,
+    503
+   ],
+   "margins": {
+    "left": 56,
+    "right": 56,
+    "top": 59,
+    "bottom": 59
+   },
+   "touching": {
+    "left": [
+     [
+      "headwear",
+      229
+     ]
+    ],
+    "top": [
+     [
+      "headwear",
+      169
+     ]
+    ]
+   },
+   "grow": [
+    "left",
+    "top"
+   ]
+  },
+  {
+   "pass": 1,
+   "crop_input": [
+    420,
+    101,
+    887,
+    590
+   ],
+   "crop_1024": [
+    327,
+    122,
+    692,
+    503
+   ],
+   "margins": {
+    "left": 127,
+    "right": 56,
+    "top": 133,
+    "bottom": 59
+   },
+   "touching": {},
+   "grow": []
+  }
+ ],
+ "final_pass": 1
+}

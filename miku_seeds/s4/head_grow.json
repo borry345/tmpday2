@@ -1,0 +1,113 @@
+{
+ "head_xywh_input": [
+  561,
+  242,
+  265,
+  289
+ ],
+ "scale": 1.28125,
+ "pad_pos": [
+  0,
+  56
+ ],
+ "iters_allowed": 3,
+ "step": 0.25,
+ "max_margin": 1.0,
+ "passes": [
+  {
+   "pass": 0,
+   "crop_input": [
+    508,
+    185,
+    879,
+    588
+   ],
+   "crop_1024": [
+    396,
+    188,
+    686,
+    502
+   ],
+   "margins": {
+    "left": 53,
+    "right": 53,
+    "top": 57,
+    "bottom": 57
+   },
+   "touching": {
+    "left": [
+     [
+      "headwear",
+      310
+     ]
+    ],
+    "top": [
+     [
+      "headwear",
+      168
+     ]
+    ]
+   },
+   "grow": [
+    "left",
+    "top"
+   ]
+  },
+  {
+   "pass": 1,
+   "crop_input": [
+    442,
+    113,
+    879,
+    588
+   ],
+   "crop_1024": [
+    344,
+    131,
+    685,
+    501
+   ],
+   "margins": {
+    "left": 119,
+    "right": 53,
+    "top": 129,
+    "bottom": 57
+   },
+   "touching": {
+    "right": [
+     [
+      "headwear",
+      9
+     ]
+    ]
+   },
+   "grow": [
+    "right"
+   ]
+  },
+  {
+   "pass": 2,
+   "crop_input": [
+    442,
+    113,
+    945,
+    588
+   ],
+   "crop_1024": [
+    344,
+    131,
+    736,
+    502
+   ],
+   "margins": {
+    "left": 119,
+    "right": 119,
+    "top": 129,
+    "bottom": 57
+   },
+   "touching": {},
+   "grow": []
+  }
+ ],
+ "final_pass": 2
+}
