@@ -44,3 +44,14 @@ pick1과 같고 **back_center만 교체** → 스펙 [miku_pick2.json](miku_pick
 - **`miku_pick2_srccolor/`** (A, 이전 pick2): 합성이 원본에 가장 가까움(PSNR 30.9) · 레이어 face·legwear·handwear 등에 남의 선
 - **`miku_pick2_clean/`** (B): 모든 레이어 생성 색 그대로(See-through 기본과 같음), mouth만 원본 색 · 레이어 깨끗 · 합성은 생성 색(PSNR 27.8, "01" 글자 등 세부가 생성된 모양)
 - 비교: **[variants_compare.png](variants_compare.png)** (위 A · 아래 B / 레이어 5장 + 얼굴·몸 합성 확대)
+
+## pick2 세 번째 버전 C: 픽셀 주인 정하기 (`miku_pick2_owner/`, 2026-11-24)
+A(합성 좋음)와 B(레이어 깨끗)를 둘 다 살리려는 시도 → 스펙 [miku_pick2_owner.json](miku_pick2_owner.json), `visible_rgb: "owner"`
+- 원본 픽셀마다 **주인 레이어를 하나** 정함: 그 레이어가 2px 안에 원본과 색이 맞는 생성 픽셀을 가지면 후보, 후보 중 **맨 앞** 레이어가 주인 (두 부위 사이 윤곽선은 앞 부위 것). 윤곽선(어두운 픽셀)은 그 레이어가 덮는 곳에서 4px까지 찾음
+- 주인만 원본 색을 받고, 주인보다 앞 레이어는 그 자리를 비움(어긋난 가장자리 제거), 뒤 레이어는 생성 색 유지(가려진 부분)
+- 레이어 안쪽 깊은 곳(3px+)은 구멍을 내지 않음. 그 안쪽에서 원본이 **어두운 선**인데 생성 색과 많이 다르면 생성 색 유지 (= 남의 선을 찍지 않음, 합성에서 그 픽셀만 조금 다름). 눈 레이어 4장 + mouth는 예외(원본 색 그대로)
+- 결과: **PSNR 41.0dB** (A 30.9 · B 27.8), 빠짐 0 · 넘침 0, hidden.png 구멍 없음
+- 비교 이미지
+  - [owner_zoom.png](owner_zoom.png): 원본 | A | B | C 합성 확대 (눈 · "01" 팔 · 치마)
+  - [owner_cmp1.png](owner_cmp1.png), [owner_cmp2.png](owner_cmp2.png): 레이어 혼자 A | B | C (face · legwear · handwear-r · eyewhite / bottomwear · topwear · headwear · front hair)
+- 남은 점: face 안쪽에 앞머리·눈 윤곽 자리 **얇은 흔적**(A보다 훨씬 옅음), legwear 허벅지 위 얇은 선 1줄, eyewhite 가장자리 살색 테두리, 바깥 윤곽 일부 1~2px 들쭉날쭉(윤곽선을 앞 부위가 가져가서)
