@@ -1,6 +1,6 @@
 {
  "spec": "seethrough_test/mix/miku_pick1.json",
- "psnr_white_db": 27.21,
+ "psnr_white_db": 32.32,
  "missing_px": 2014,
  "extra_px": 26,
  "layers_front_to_back": [
@@ -10,6 +10,7 @@
    "tag": "front hair",
    "depth_median": 0.051,
    "px": 47325,
+   "src_px": 47325,
    "file": "layers/00_front_hair.png"
   },
   {
@@ -18,6 +19,7 @@
    "tag": "irides",
    "depth_median": 0.165,
    "px": 3379,
+   "src_px": 3379,
    "file": "layers/01_irides.png"
   },
   {
@@ -26,6 +28,7 @@
    "tag": "eyelash",
    "depth_median": 0.165,
    "px": 2393,
+   "src_px": 1877,
    "file": "layers/02_eyelash.png"
   },
   {
@@ -34,6 +37,7 @@
    "tag": "eyewhite",
    "depth_median": 0.294,
    "px": 4525,
+   "src_px": 1309,
    "file": "layers/03_eyewhite.png"
   },
   {
@@ -42,6 +46,7 @@
    "tag": "eyebrow",
    "depth_median": 0.329,
    "px": 453,
+   "src_px": 288,
    "file": "layers/04_eyebrow.png"
   },
   {
@@ -51,6 +56,7 @@
    "split": "left",
    "depth_median": 0.357,
    "px": 13096,
+   "src_px": 13096,
    "file": "layers/05_handwear-l.png"
   },
   {
@@ -61,6 +67,7 @@
    "rgb_from": "src",
    "depth_median": 0.43,
    "px": 114,
+   "src_px": 114,
    "file": "layers/06_mouth.png"
   },
   {
@@ -69,6 +76,7 @@
    "tag": "face",
    "depth_median": 0.431,
    "px": 33590,
+   "src_px": 13824,
    "file": "layers/07_face.png"
   },
   {
@@ -86,6 +94,7 @@
    "tag": "topwear",
    "depth_median": 0.569,
    "px": 18216,
+   "src_px": 16456,
    "file": "layers/09_topwear.png"
   },
   {
@@ -94,6 +103,7 @@
    "tag": "headwear",
    "depth_median": 0.58,
    "px": 19878,
+   "src_px": 16149,
    "file": "layers/10_headwear.png"
   },
   {
@@ -102,6 +112,7 @@
    "tag": "bottomwear",
    "depth_median": 0.624,
    "px": 13184,
+   "src_px": 8137,
    "file": "layers/11_bottomwear.png"
   },
   {
@@ -110,6 +121,7 @@
    "tag": "legwear",
    "depth_median": 0.706,
    "px": 33275,
+   "src_px": 27003,
    "file": "layers/12_legwear.png"
   },
   {
@@ -119,6 +131,7 @@
    "split": "right",
    "depth_median": 0.741,
    "px": 13257,
+   "src_px": 7929,
    "file": "layers/13_handwear-r.png"
   },
   {
@@ -128,6 +141,7 @@
    "split": "left",
    "depth_median": 0.89,
    "px": 86662,
+   "src_px": 83947,
    "file": "layers/14_tail_left.png"
   },
   {
@@ -144,6 +158,7 @@
    "keep": "largest",
    "depth_median": 0.898,
    "px": 64775,
+   "src_px": 7374,
    "file": "layers/15_back_center.png"
   },
   {
@@ -153,6 +168,7 @@
    "split": "right",
    "depth_median": 0.906,
    "px": 82137,
+   "src_px": 67363,
    "file": "layers/16_tail_right.png"
   }
  ]

@@ -16,5 +16,6 @@
 | headwear | s6 | 분리 안 함 (나중에 트윈테일 앞/뒤로 나눌 예정) |
 
 - 순서 = 레이어마다 자기 seed의 깊이 중앙값 (가까운 → 먼): `miku_pick1/sheet.png`
-- 확인: `miku_pick1/check.png` (원본 | 조합 | 빨강=빠짐 2,014px · 파랑=넘침 26px · 노랑=색 차이) · PSNR 27.2dB
+- 확인: `miku_pick1/check.png` (원본 | 조합 | 빨강=빠짐 2,014px · 파랑=넘침 26px · 노랑=색 차이) · PSNR 32.3dB
+- 색: 보이는 픽셀은 모두 원본 색 (반투명 가장자리는 불투명 레이어가 나올 때까지 밑 레이어도 원본 색), 가려진 부분만 생성 색 → 레이어 가장자리 선·테두리 제거
 - PSD: `miku_pick1/mix.psd` (17레이어, neck 꺼짐) · 레이어 PNG: `miku_pick1/layers/NN_이름.png` (00 = 맨 앞)
