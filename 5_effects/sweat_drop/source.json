@@ -1,0 +1,17 @@
+{
+ "what": "sweat drop effect, transparent, cropped (usable for any character)",
+ "size": [
+  15,
+  21
+ ],
+ "made_from": "miku \"surprised\" expression, See-through face layer",
+ "placements": {
+  "miku": {
+   "page_xy": [
+    478,
+    403
+   ],
+   "page": "1024 square"
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "layer": "13_legwear-r.png",
+ "pivot": [
+  605.3,
+  732.1
+ ],
+ "cut": [
+  577.0,
+  746.0,
+  632.0,
+  719.0
+ ],
+ "width_px": 62.2,
+ "cap_px": 31,
+ "line_px": 4,
+ "axis": [
+  0.339,
+  0.941
+ ],
+ "pieces": {
+  "thigh_r": 9909,
+  "shin_r": 9293
+ },
+ "order_front_to_back": [
+  "shin_r",
+  "thigh_r",
+  "shin_r_joint_line"
+ ],
+ "note": "shin_r_joint_line moves with shin_r (same bone) but is drawn behind thigh_r"
+}

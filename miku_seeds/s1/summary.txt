@@ -1,1 +1,0 @@
-﻿MIN_FREE_RAM_MB=10112  EXIT=0  SECONDS=314  PEAK_GPU_MB=10868  BASELINE_MB=2894  PEAK_MINUS_BASE_MB=7974  ARGS=inference/scripts/inference_psd_quantized.py 1024 --no_group_offload --tblr_split --seed 1 HEAD_GROW=3
