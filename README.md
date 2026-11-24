@@ -29,6 +29,7 @@
 `<표정>/` 폴더마다: `eyelash_l/r`, `irides_l/r`, `eyewhite_l/r`, `eyebrow_l/r`, `mouth`, (smile) `blush`, (surprised) `sweat`
 - 눈은 x=540에서 좌·우 분리 (`_l` = 그림의 왼쪽). 윙크 가능.
 - smile 홍조는 face 레이어에서 따로 떼어 `blush.png`.
+- 입 색은 각 표정 원본 그림에서 가져옴 (생성 입의 반투명 회색 가장자리 = "수염" 없앰, v1 입과 같은 방식) ([비교](4_face_parts/mouth_whisker_fix.png))
 - surprised·oh 입 둘레 살색 고리 제거 ([전후 비교](4_face_parts/mouth_clean.png)).
 
 ![바꿔 끼우기 확인](4_face_parts/check_swap.png)

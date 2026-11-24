@@ -12,6 +12,7 @@
    "eyewhite_r": 1687,
    "eyebrow_l": 254,
    "eyebrow_r": 197,
+   "mouth_rgb_from_src": true,
    "mouth": 114,
    "mouth_rim_removed": 0
   },
@@ -24,6 +25,7 @@
    "eyewhite_r": 0,
    "eyebrow_l": 226,
    "eyebrow_r": 162,
+   "mouth_rgb_from_src": true,
    "mouth": 79,
    "mouth_rim_removed": 0
   },
@@ -36,8 +38,9 @@
    "eyewhite_r": 0,
    "eyebrow_l": 279,
    "eyebrow_r": 178,
-   "mouth": 953,
-   "mouth_rim_removed": 0,
+   "mouth_rgb_from_src": true,
+   "mouth": 610,
+   "mouth_rim_removed": 343,
    "blush_boxes": [
     [
      469,
@@ -62,8 +65,9 @@
    "eyewhite_r": 1736,
    "eyebrow_l": 293,
    "eyebrow_r": 187,
-   "mouth": 926,
-   "mouth_rim_removed": 0
+   "mouth_rgb_from_src": true,
+   "mouth": 920,
+   "mouth_rim_removed": 6
   },
   "ee": {
    "eyelash_l": 1475,
@@ -74,8 +78,9 @@
    "eyewhite_r": 1627,
    "eyebrow_l": 255,
    "eyebrow_r": 173,
-   "mouth": 776,
-   "mouth_rim_removed": 0
+   "mouth_rgb_from_src": true,
+   "mouth": 735,
+   "mouth_rim_removed": 41
   },
   "oh": {
    "eyelash_l": 1488,
@@ -86,8 +91,9 @@
    "eyewhite_r": 1711,
    "eyebrow_l": 285,
    "eyebrow_r": 190,
-   "mouth": 244,
-   "mouth_rim_removed": 132
+   "mouth_rgb_from_src": true,
+   "mouth": 241,
+   "mouth_rim_removed": 135
   },
   "surprised": {
    "eyelash_l": 1127,
@@ -98,8 +104,9 @@
    "eyewhite_r": 0,
    "eyebrow_l": 191,
    "eyebrow_r": 151,
-   "mouth": 581,
-   "mouth_rim_removed": 796,
+   "mouth_rgb_from_src": true,
+   "mouth": 579,
+   "mouth_rim_removed": 798,
    "sweat_boxes": [
     [
      480,
@@ -118,8 +125,9 @@
    "eyewhite_r": 0,
    "eyebrow_l": 269,
    "eyebrow_r": 201,
-   "mouth": 268,
-   "mouth_rim_removed": 0
+   "mouth_rgb_from_src": true,
+   "mouth": 236,
+   "mouth_rim_removed": 32
   }
  }
 }
