@@ -36,3 +36,12 @@
 
 ## 5. 공용 효과 — [5_effects](5_effects)
 `sweat_drop/sweat_drop.png` (15×21, 투명) — 다른 캐릭터에도 쓰는 땀방울. `source.json`에 캐릭터별 위치.
+
+## 7. Stretchy Studio 시험 (2026-11-26) — [7_stretchy_test](7_stretchy_test)
+miku v1·v2를 Stretchy Studio(See-through 결과용 오픈소스 리깅 도구)에 넣어 봄. 자세한 내용은 [7_stretchy_test/README.md](7_stretchy_test/README.md).
+- 레이어 자동 인식 v1 21/21, v2 45/45. 그리는 순서·그림 그대로.
+- Stretchy용 PSD를 따로 만듦: 레이어를 그림 범위로 자르고, See-through 태그 이름, 좌우는 캐릭터 기준(Stretchy 뼈대가 캐릭터 본인 왼쪽을 leftArm으로 씀).
+- 자동 뼈대: 레이어 범위 추정은 팔다리 방향은 맞지만 관절 위치는 손으로 고쳐야 함. AI 자세 인식(DWPose)은 SD 체형에서 실패.
+- 관절 기준점을 우리 rig.json 테스트 뼈 값으로 넣고 회전 → v1·v2 모두 팔꿈치·무릎이 틈 없이 굽음. Stretchy는 메시 변형이라 v1 한 장 팔다리도 잘 굽음.
+
+![팔꿈치·무릎 확대 (위 v1, 아래 v2)](7_stretchy_test/7_bend_zoom.png)
