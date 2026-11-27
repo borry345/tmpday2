@@ -42,6 +42,14 @@ miku v1·v2를 Stretchy Studio(See-through 결과용 오픈소스 리깅 도구)
 - 레이어 자동 인식 v1 21/21, v2 45/45. 그리는 순서·그림 그대로.
 - Stretchy용 PSD를 따로 만듦: 레이어를 그림 범위로 자르고, See-through 태그 이름, 좌우는 캐릭터 기준(Stretchy 뼈대가 캐릭터 본인 왼쪽을 leftArm으로 씀).
 - 자동 뼈대: 레이어 범위 추정은 팔다리 방향은 맞지만 관절 위치는 손으로 고쳐야 함. AI 자세 인식(DWPose)은 SD 체형에서 실패.
-- 관절 기준점을 우리 rig.json 테스트 뼈 값으로 넣고 회전 → v1·v2 모두 팔꿈치·무릎이 틈 없이 굽음. Stretchy는 메시 변형이라 v1 한 장 팔다리도 잘 굽음.
+- 관절 기준점을 우리 rig.json 테스트 뼈 값으로 넣고 회전 → (정정: 숫자 입력이라 팔꿈치·무릎은 실제로 안 굽었음. 8절 참고)
 
 ![팔꿈치·무릎 확대 (위 v1, 아래 v2)](7_stretchy_test/7_bend_zoom.png)
+
+## 8. 관절 위치를 넣은 .stretch 파일 (2026-11-27) — [8_stretch_project](8_stretch_project)
+- `miku_v1.stretch`, `miku_v2.stretch`: 열면 관절 8개가 rig.json 위치로 맞춰져 있음. 관절을 먼저 넣고 팔다리를 Remesh해서 가중치도 실제 관절 기준.
+- **정정:** Stretchy는 캔버스에서 관절 호를 마우스로 끌 때만 팔꿈치·무릎을 휘게 함. 7절의 "팔꿈치·무릎이 굽음"은 숫자 입력이라 실제로는 안 굽었고, 어깨·엉덩이 회전만 보였던 것.
+- 호를 끌어 다시 확인: 예전 방식은 위팔이 찢어지듯 늘어나고, .stretch는 실제 팔꿈치에서 꺾임. 무릎은 둘 다 굽음.
+- 메시 변형 설정(Grid Spacing·Edge Points 등)과 팔꿈치 휘는 폭(코드에 40px 고정) 정리.
+
+![팔꿈치·무릎 비교](8_stretch_project/1_elbow_knee_compare.png)
